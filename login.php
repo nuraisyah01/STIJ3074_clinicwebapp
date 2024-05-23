@@ -37,19 +37,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
 
             // Verify the password
-            if ($hashed_input_password === $hashed_password) {
-
                 echo "<script>alert('Login Successful')</script>";
             } else {
                 echo "<script>alert('Login Failed')</script>";
             }
         } else {
-            echo "No account found with that email.";
+            echo "<script>alert('No account found with that email')</script>";
         }
     } else {
         echo "Please fill out all fields.";
     }
-}
 }
 ?>
 
