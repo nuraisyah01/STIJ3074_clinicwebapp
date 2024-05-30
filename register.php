@@ -64,16 +64,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="w3.css">
+    <style>
+        .header {
+            position: relative;
+            color: black;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .header::before {
+            content: "";
+            background-image: url('img3.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="w3-container w3-center w3-dark-grey w3-padding-32">
-        <h1>Clinic Web Application</h1>
+    <header class="w3-container w3-center w3-padding-32 header">
+        <h1>Clinic Web</h1>
         <p>Clinic Registration</p>
     </header>
     <div class="w3-bar w3-dark-grey">
         <a href="index.html" class="w3-bar-item w3-button">Home</a>
+        
     </div>
+    
     <div style="min-height:100vh;overflow-y: auto;">
         <div class="w3-container w3-padding-64">
             <div class="w3-card w3-round" style="max-width:600px;margin:auto">
@@ -126,7 +149,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
     <footer class="w3-container w3-center w3-dark-grey">
-        <p>&copy; 2024 Clinic Web App. All rights reserved.</p>
+        <p>&copy; 2024 Clinic Web. All rights reserved.</p>
     </footer>
 </body>
 
