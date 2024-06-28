@@ -1,6 +1,6 @@
 .header-background {
     position: relative;
-    color: white; /* Ensure the text color is readable */
+    color: white;
     overflow: hidden;
 }
 .header-background::before {
@@ -10,15 +10,15 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../header.png'); /* Replace with your image path */
-    background-size: cover; /* Ensure the image covers the entire header */
-    background-position: center; /* Center the image */
-    filter: blur(0.5px); /* Adjust the blur intensity to your preference */
-    z-index: -1; /* Ensure the background image stays behind the text */
-    transform: scale(1.1); /* Prevent edges from becoming visible due to the blur effect */
+    background-image: url('../header.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(0.5px);
+    z-index: -1;
+    transform: scale(1.1);
 }
 .header-text {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow effect to the text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     font-family: 'Arial', sans-serif;
 }
 #navbar {
@@ -67,11 +67,11 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: 0.3s;
-    width: calc(33.33% - 40px); /* Adjust width for responsiveness */
+    width: calc(33.33% - 40px);
     border-radius: 10px;
-    display: inline-block; /* Display cards inline */
-    vertical-align: top; /* Align cards at the top */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
 
 }
 
@@ -81,8 +81,8 @@
 
 .card img {
     border-radius: 10px 10px 0 0;
-    width: 100%; /* Make sure image fills the container */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
 }
 
 .container {
@@ -109,17 +109,14 @@
     width: 80%;
     max-width: 500px;
 }
-/* CSS for cards */
 
-/* Responsive design for cards */
 @media (max-width: 768px) {
     .card {
-        width: calc(50% - 40px); /* Two cards per row on smaller screens */
+        width: calc(50% - 40px);
     }
 }
-
 @media (max-width: 480px) {
     .card {
-        width: calc(100% - 40px); /* One card per row on extra small screens */
+        width: calc(100% - 40px);
     }
 }
