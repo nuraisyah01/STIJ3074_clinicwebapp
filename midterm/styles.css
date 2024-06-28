@@ -1,0 +1,125 @@
+.header-background {
+    position: relative;
+    color: white; /* Ensure the text color is readable */
+    overflow: hidden;
+}
+.header-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../header.png'); /* Replace with your image path */
+    background-size: cover; /* Ensure the image covers the entire header */
+    background-position: center; /* Center the image */
+    filter: blur(0.5px); /* Adjust the blur intensity to your preference */
+    z-index: -1; /* Ensure the background image stays behind the text */
+    transform: scale(1.1); /* Prevent edges from becoming visible due to the blur effect */
+}
+.header-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow effect to the text */
+    font-family: 'Arial', sans-serif;
+}
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+    }
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+    .content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+    }
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    width: 300px;
+    height:auto;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    width: calc(33.33% - 40px); /* Adjust width for responsiveness */
+    border-radius: 10px;
+    display: inline-block; /* Display cards inline */
+    vertical-align: top; /* Align cards at the top */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card img {
+    border-radius: 10px 10px 0 0;
+    width: 100%; /* Make sure image fills the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+ 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #E0FFFF;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+/* CSS for cards */
+
+/* Responsive design for cards */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 40px); /* Two cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 40px); /* One card per row on extra small screens */
+    }
+}
