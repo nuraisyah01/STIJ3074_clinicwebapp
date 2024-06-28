@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Clinic Services</title>
+    <script src="services.js">
+    </script>
+</head>
+<body>
+    <header class="w3-container w3-center w3-padding-32 header-background">
+        <h1 class="header-text">Clinic Services</h1>
+        <p class="w3-xmedium header-text">Providing comprehensive care with a range of services including consultations, diagnostics, and treatments.</p>
+    </header>
+    <div id="navbar" >
+        <a class="active" href="index.html">Home</a>
+        <a href="logout.php" class="w3-bar-item w3-button w3-right">Logout</a>
+    </div>
+    <div id="services-container" class="w3-container w3-margin-top w3-center content"></div>
+    <div id="service-modal" class="modal">
+        <div class="modal-content" id="modal-content"></div>
+    </div>
+    <footer class="w3-container w3-center w3-dark-grey">
+        <p>&copy; 2024 Clinic Web. All rights reserved.</p>
+    </footer>
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+</script>
+</body>
+</html>
