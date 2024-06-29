@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('services/fetchservices.php')
+    fetch('fetchservices.php')
         .then(response => response.json())
         .then(data => displayServices(data))
         .catch(error => console.error('Error fetching services:', error));
@@ -23,7 +23,7 @@ function displayServices(services) {
 }
 
 function showServiceDetails(serviceId) {
-    fetch('services/fetchservices.php')
+    fetch('fetchservices.php')
         .then(response => response.json())
         .then(services => {
             const service = services.find(s => s.service_id === serviceId);
