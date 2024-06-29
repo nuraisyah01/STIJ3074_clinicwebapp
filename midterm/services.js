@@ -11,7 +11,7 @@ function displayServices(services) {
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-            <img src="services/images/${service.service_id}.png" alt="${service.service_name}" style="width:100%">
+            <img src="images/${service.service_id}.png" alt="${service.service_name}" style="width:100%">
             <div class="container">
                 <h4><b>${service.service_name}</b></h4>
                 <p>${service.service_description}</p>
